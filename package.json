@@ -1,0 +1,11 @@
+{
+  "name": "sportyspiceapi",
+  "version": "1.0.0",
+  "description": "Spice up your life!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SpiceGirls (including Elie)",
+  "license": "ISC"
+}
