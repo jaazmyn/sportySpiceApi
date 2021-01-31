@@ -4,7 +4,6 @@
   "description": "Spice up your life!",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf dist",
     "webpack": "webpack",
     "start": "nodemon --exec babel-node index.js"
   },
