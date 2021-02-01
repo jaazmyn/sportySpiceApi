@@ -1,9 +1,9 @@
-const express = require("express");
-const app = express();
-const port = 3000;
+import express from "express";
+import postRoutes from "./routes/posts";
 
-app.get("/", (req, res) => {
-  res.send("Hello from root route");
-});
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use("/posts", postRoutes);
 
 app.listen(port, () => console.log("Server listening on 3000"));
