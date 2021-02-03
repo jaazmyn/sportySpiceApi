@@ -1,5 +1,19 @@
+import db from "../db/configdb";
+import Queries from "../db/queries";
+
 const postsController = {
-  logPosts: (req, res) => res.send("helloooooooo"),
+  getPosts: async (req, res) => {
+    try {
+      const result = await db.query(Queries.getAll);
+      res.json({
+        message: "sucessfully sent",
+        status: 200,
+        data: result.rows,
+      });
+    } catch (e) {
+      error(Error(e));
+    }
+  },
   logRequest: (req, res, next) => {
     console.log("GET /posts");
     console.log("IP INC: " + req.ip);
