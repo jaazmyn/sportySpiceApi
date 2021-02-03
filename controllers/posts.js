@@ -1,4 +1,4 @@
-import db from "../db/configdb";
+import db from "../db/config.db";
 import Queries from "../db/queries";
 
 const postsController = {
