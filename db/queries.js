@@ -6,3 +6,5 @@ const queryPosts = {
   sortedByRating:
     "SELECT * FROM posts JOIN users ON users.id = posts.user_id JOIN premium ON premium.id = users.premium_id ORDER BY rating DESC",
 };
+
+export default queryPosts;
