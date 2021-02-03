@@ -90,7 +90,7 @@ const queryPosts = {
     INNER JOIN topics AS t ON t.id = p.topic_id
     INNER JOIN users AS u ON u.id = p.user_id
     INNER JOIN premium AS pr ON pr.id = u.premium_id
-    ORDER BY p.rating DESC;`
+    ORDER BY p.rating DESC;`,
 };
 
 export default queryPosts;
