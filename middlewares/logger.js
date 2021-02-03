@@ -27,7 +27,7 @@ const Logger = {
     );
     console.log(`IP: ${req.ip}`);
     console.log(
-      `HTTP ${req.httpVersion} host: ${req.headers.host} connection: ${req.headers.connection}`
+      `HTTP ${req.httpVersion} host: ${req.headers.host} ${req.headers.connection}`
     );
     console.log(
       `Request finished in ${chalk.red(
