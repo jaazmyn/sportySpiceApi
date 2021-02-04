@@ -3,21 +3,33 @@ import Queries from "../db/queries";
 
 const postsController = {
   getPosts: async (req, res) => {
+    const { sort, search, topic } = req.query;
+    let queryArguements;
+
+    if (sort) {
+      queryArguements = [Queries.sortedByRating];
+    } else if (topic) {
+      queryArguements = [Queries.filterByTopic, ["%" + topic + "%"]];
+    } else if (search) {
+      queryArguements = [Queries.searchPosts, ["%" + search + "%"]];
+    } else {
+      queryArguements = [Queries.getAll];
+    }
     try {
-      console.log(Queries.getAll);
-      const result = await db.query(Queries.getAll);
+
+      const result = await db.query(queryArguements[0], queryArguements[1]);
+
       res.json({
         message: "sucessfully sent",
         status: 200,
         data: result.rows,
       });
     } catch (e) {
-      error(Error(e));
+      console.error(Error(e));
     }
   },
   getById: async (req, res) => {
     try {
-      console.log(Queries.getAll);
       const result = await db.query(Queries.getById, [req.params.id]);
       res.json({
         message: "sucessfully sent",
@@ -25,7 +37,7 @@ const postsController = {
         data: result.rows,
       });
     } catch (e) {
-      error(Error(e));
+      console.error(Error(e));
     }
   },
 };
