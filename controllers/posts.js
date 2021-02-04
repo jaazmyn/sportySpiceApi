@@ -9,9 +9,9 @@ const postsController = {
     if (sort) {
       queryArguements = [Queries.sortedByRating];
     } else if (topic) {
-      queryArguements = [Queries.filterByTopic, ["%" + topic + "%"]];
+      queryArguements = [Queries.filterByTopic, ["%" + topic.toLowerCase() + "%"]];
     } else if (search) {
-      queryArguements = [Queries.searchPosts, ["%" + search + "%"]];
+      queryArguements = [Queries.searchPosts, ["%" + search.toLowerCase() + "%"]];
     } else {
       queryArguements = [Queries.getAll];
     }
