@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime.js";
 import express from "express";
 import Logger from "./middlewares/logger";
 import postRoutes from "./routes/posts";
