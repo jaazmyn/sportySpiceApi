@@ -109,7 +109,7 @@ const queryPosts = {
     JOIN topics AS t ON t.id = p.topic_id
     JOIN users AS u ON u.id = p.user_id 
     JOIN premium AS pr ON pr.id = u.premium_id
-    WHERE (t.name) LIKE $1`,
+    WHERE LOWER (t.name) LIKE $1`,
   searchPosts: 
     `SELECT 
       json_build_object(
@@ -137,7 +137,7 @@ const queryPosts = {
     JOIN topics AS t ON t.id = p.topic_id
     JOIN users AS u ON u.id = p.user_id 
     JOIN premium AS pr ON pr.id = u.premium_id
-    WHERE p.title LIKE $1 OR p.description LIKE $1`,
+    WHERE LOWER (p.title) LIKE $1 OR LOWER (p.description) LIKE $1`,
 };
 
 export default queryPosts;
