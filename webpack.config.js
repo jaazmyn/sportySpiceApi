@@ -1,4 +1,5 @@
-var path = require("path");
+const path = require("path");
+const regeneratorRuntime = require("regenerator-runtime");
 
 module.exports = {
   mode: "production",
@@ -11,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        exclude: [/node_modules/, "./sportySpiceApi/tests/*"],
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
         },
