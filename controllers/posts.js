@@ -16,7 +16,9 @@ const postsController = {
       queryArguements = [Queries.getAll];
     }
     try {
+
       const result = await db.query(queryArguements[0], queryArguements[1]);
+
       res.json({
         message: "sucessfully sent",
         status: 200,
