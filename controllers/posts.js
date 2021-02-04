@@ -4,7 +4,6 @@ import Queries from "../db/queries";
 const postsController = {
   getPosts: async (req, res) => {
     try {
-      console.log(Queries.getAll);
       const result = await db.query(Queries.getAll);
       res.json({
         message: "sucessfully sent",
@@ -17,7 +16,6 @@ const postsController = {
   },
   getById: async (req, res) => {
     try {
-      console.log(Queries.getAll);
       const result = await db.query(Queries.getById, [req.params.id]);
       res.json({
         message: "sucessfully sent",

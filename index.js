@@ -11,3 +11,5 @@ app.use(Logger.print);
 app.use("/posts", postRoutes);
 
 app.listen(port, () => console.log(`Server listening on ${port}`));
+
+export default app;
