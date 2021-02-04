@@ -4,18 +4,19 @@ import Queries from "../db/queries";
 const postsController = {
   getPosts: async (req, res) => {
     const { sort, search, topic } = req.query;
-    const query;
+    let queryArguements;
 
-    console.log(sort);
     if (sort) {
-      query = [Queries.sortedByRating, sort];
+      queryArguements = [Queries.sortedByRating];
+    } else if (topic) {
+      queryArguements = [Queries.filterByTopic, ["%" + topic + "%"]];
     } else if (search) {
-      query = [Queries.sortedByRating, search];
+      queryArguements = [Queries.searchPosts, ["%" + search + "%"]];
     } else {
-      query = [Queries.getAll];
+      queryArguements = [Queries.getAll];
     }
     try {
-      const result = await db.query(query[0], query[1]);
+      const result = await db.query(queryArguements[0], queryArguements[1]);
       res.json({
         message: "sucessfully sent",
         status: 200,
