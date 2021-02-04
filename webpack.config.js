@@ -1,5 +1,4 @@
 const path = require("path");
-const regeneratorRuntime = require("regenerator-runtime");
 
 module.exports = {
   mode: "production",
