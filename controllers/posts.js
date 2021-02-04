@@ -4,7 +4,9 @@ import Queries from "../db/queries";
 const postsController = {
   getPosts: async (req, res) => {
     const { sort, search, topic } = req.query;
-    let query;
+    const query;
+
+    console.log(sort);
     if (sort) {
       query = [Queries.sortedByRating, sort];
     } else if (search) {
@@ -12,7 +14,6 @@ const postsController = {
     } else {
       query = [Queries.getAll];
     }
-    console.log(query);
     try {
       const result = await db.query(query[0], query[1]);
       res.json({
