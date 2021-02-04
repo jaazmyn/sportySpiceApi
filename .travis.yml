@@ -7,9 +7,3 @@ script:
   - npm install
   - echo 'Testing..'
   - npm test
-deploy:
-  provider: heroku
-  api_key:
-    secure: 2hSbH45quCFFRdE1FhBC5LF9rx6l/AW0PrvO9G2VwtXiSkVOL5ME+LENoRd9rEx+Xvyqa0hl39eDCjDbTD4W4ksk1WViBjgahwpvr+SzyY5U7RiOhzRkOJXWdziI85/+rE6II4p5f61VIMPfY2xse1bJZk9lG83Nu9fT5Kgv0TxyVDRdEefhS88lYCEQoCUyStFnlMVlABe8BAWWVY1boxdeqhwOdGcAFAabl+nzyKXF9V1cQIaaDKopDuCEFhwTkBTZSBGCy2BnVEZoLsf9Iy/Ysst0x2R1Ets2rddV63/jD40k9HACF8lLYipOKMclrv1F4UFyw80TgZocQAR1CQe2KVnjJaApL7yzkhZaO8293N3VaPMsCYBF8Lp2C6GcfavD5GHONWzUivDEOhANIwVbYaj/ku+hZA4Rk8SGbDLMqXzP4khLvVMWMjy9VJK3GE1P8nGiAtT9BgMS1YmO5bvdD0PC5EvEEa0ZuXWHeyxxfjIA/3I+TciNXegYRYq0QZyXnixphZEY2Y4UmK6cLl50xCay4IJ6md2tborntBLxA86151FgLi8bubpe9NMVYe+fQq2Gt6xkBPIN4oFFTAacriWhGDfS3fn2sQnEpR+VgQcLLdnLavdvYYlzJd7v5dRxGcTAVk1OEwVgF1nxFhXTOO2Hwb8mHR9r4GgSMjM=
-  on:
-    branch: main
