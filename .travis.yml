@@ -1,17 +1,15 @@
 language: node_js
 node_js:
   - "15"
-
 script:
   - echo 'Build starts..'
   - echo 'Installing Dependencies..'
   - npm install
   - echo 'Testing..'
   - npm test
-
 deploy:
   provider: heroku
   api_key:
-    secure: tQf3C9+bjhIjZp8B5mQ17QKQzZjWRf09AhOn7HDlnLnoCnYjtXcWk+l0f1JxFu4Oqo7uyq/vp60s7zGMpISPFsiJSCfTDcuHQxrRF5Rb4iRL8W1y5Tiwkef5OYhW0JtpMJA9NDRME/JeaIbTWigqZ2av2oFo2MzZX4GgPcrVbYhrPv+8kLMSifBZvT/0TgH6Qz43geNDAhRxrqebZcAaPBJ65gct3fcletMlnsfY/e+lfI72tXmdOux4J1ZFinbeEr1gGVuk9Ja6cT0O1nBd2VnnNPrK3RParjKbzcYFh2tqXjUetaZ19s7vcda0pdWBClZrWWccLcR40NjPwCs6J+/Ju2tEKNrnit2T+6hHxcu6Xz0HvQ1cHFA+MP4UxHw6jWxYHiwU3aHjNNchl5wBsRC6WKrkGkFSJcb31/sKs1xscAid7VyhtASDHV6BrD1TFSE4K9ga1EJ5dS7Pn6ibCavyNKxLNO0GyY+cUaDiD/TuTDzaiQ9tkL0OPI79EUGnp7lvK+lQW0DV4c7ygn/Q0xmgsip+uiATGJOXrPGkZ1fDsi+30PyAhjw5NP6U2GzrwKM4ZgRIAOnycuINxt6FrgqI6vrkVGRl8eJbJCeWq9Nvb/Ce/JYjKX3bFhc8zsppR91iyCdAV1yGUC8dH0aE1GSN0XOZgXjK4A87ggb+4N8=
+    secure: 6+aG7x3099oARXepaRPv1bB5VL7oT40axTb75VXuW+75t7MZ0yX3ji38YFAU2reytGy7SN0Lct7+OdaMxd68wtOZ2Nyqcp8malnKJULJ9jz7JJECn/x1nLBFnVeCykd0Qhxz9KO21ElEYMe/FEAgnYQ2t2J+4csDP8SIc7VqpD1mBKoKhsPaAY70S07BdzktImOah+nbQ2kAFpqAsuxbhW7eD7rBk5pe2tXs7cHmVy4g0vjmz9uwu4mgAERzm+PNMScj/1Ctt26WoSYQkpTgV4Vrb3BE+uf3gr/ZN8ub+DAS82njlefWmfy2QIHj5ypsvuf5u+wOd8bTEEj6roUmMU7UfjM7L0zzIuUOoOXqyiJ8je3P+vgKn8l/LFphKAAQp0vCPxA3LSy328ns5wTAeZKSf+dmMfZxG8ITeRSX8vi1eDOXc2IJ3rpyjopo0A8RcrHmgKEbFCrU+om1F6Zoh3I9FaJr2FyoYwdqTRes+GwFnp8HhvcZt2SjDg4yNy8YabX202KdL5gAltvj8QwIuwwIdqCG84D5AqN+lZdis6E14YosoLjxOydFlI8LKuWXWo5paKl0ZtmXUuvwadL29E9/hqz9TQOw8qUkyernl2n0bM4WdZ0BNWpp/5pduLpKWPFx0hl/F3R122x+ppYvDXkJu8+Gv/a2t/rvSIHOfMc=
   on:
     branch: main
