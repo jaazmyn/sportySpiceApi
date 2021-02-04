@@ -22,6 +22,7 @@ const postsController = {
       res.json({
         message: "sucessfully sent",
         status: 200,
+        count: result.rows.length,
         data: result.rows,
       });
     } catch (e) {
