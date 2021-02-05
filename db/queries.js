@@ -1,6 +1,5 @@
 const queryPosts = {
-  getAll: 
-    `SELECT
+  getAll: `SELECT
       json_build_object(
         'id', p.id,
         'title', p.title,
@@ -26,8 +25,8 @@ const queryPosts = {
       INNER JOIN topics AS t ON t.id = p.topic_id
       INNER JOIN users AS u ON u.id = p.user_id
       INNER JOIN premium AS pr ON pr.id = u.premium_id;`,
-  getById: 
-    `SELECT
+
+  getById: `SELECT
       json_build_object(
         'id', p.id,
         'title', p.title,
@@ -54,8 +53,8 @@ const queryPosts = {
       INNER JOIN users AS u ON u.id = p.user_id
       INNER JOIN premium AS pr ON pr.id = u.premium_id
       where p.id=$1;`,
-  sortedByRating:
-    `SELECT
+
+  sortedByRating: `SELECT
     json_build_object(
       'id', p.id,
       'title', p.title,
@@ -82,8 +81,8 @@ const queryPosts = {
     INNER JOIN users AS u ON u.id = p.user_id
     INNER JOIN premium AS pr ON pr.id = u.premium_id
     ORDER BY p.rating DESC;`,
-  filterByTopic: 
-    `SELECT 
+
+  filterByTopic: `SELECT 
       json_build_object(
         'id', p.id,
         'title', p.title,
@@ -110,8 +109,8 @@ const queryPosts = {
     JOIN users AS u ON u.id = p.user_id 
     JOIN premium AS pr ON pr.id = u.premium_id
     WHERE LOWER (t.name) LIKE $1`,
-  searchPosts: 
-    `SELECT 
+
+  searchPosts: `SELECT 
       json_build_object(
         'id', p.id,
         'title', p.title,
