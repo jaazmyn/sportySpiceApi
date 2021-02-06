@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime.js";
 import express from "express";
 import Logger from "./middlewares/logger";
 import postRoutes from "./routes/posts";
@@ -13,5 +14,3 @@ app.use("/posts", postRoutes);
 app.listen(port, () => console.log(`Server listening on ${port}`));
 
 export default app;
-
-// demo travis and heroku

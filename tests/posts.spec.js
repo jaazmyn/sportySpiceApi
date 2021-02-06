@@ -1,15 +1,14 @@
 // Import the dependencies for testing
 import chai from "chai";
 import chaiHttp from "chai-http";
-import regeneratorRuntime from "regenerator-runtime";
 import app from "../index";
 
 // Configure chai
 chai.use(chaiHttp);
 chai.should();
+
 describe("Posts", () => {
   describe("GET /posts", () => {
-    // Test to get all posts records
     it("should get all post records", (done) => {
       chai
         .request(app)
@@ -17,10 +16,13 @@ describe("Posts", () => {
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a("object");
+          res.body.should.have.property("data");
           done();
         });
     });
-    // Test to get single post record
+  });
+
+  describe("GET /posts/:id", () => {
     it("should get a single post record by id", (done) => {
       const id = 1;
       chai
@@ -29,10 +31,54 @@ describe("Posts", () => {
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a("object");
+          res.body.should.have.property("data");
+          done();
+        });
+    });
+  });
+
+  describe("GET /posts?search=a", () => {
+    it("should get search results", (done) => {
+      const search = "a";
+      chai
+        .request(app)
+        .get(`/posts?search=${search}`)
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a("object");
+          res.body.should.have.property("data");
+          done();
+        });
+    });
+  });
+
+  describe("GET /posts?topic=Curling", () => {
+    it("should get posts by topic name", (done) => {
+      const topic = "Curling";
+      chai
+        .request(app)
+        .get(`/posts?topic=${topic}`)
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a("object");
+          res.body.should.have.property("data");
+          done();
+        });
+    });
+  });
+
+  describe("GET /posts?sort=order:desc", () => {
+    it("should get posts sorted by rating", (done) => {
+      const topic = "order:desc";
+      chai
+        .request(app)
+        .get(`/posts?sort=${topic}`)
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a("object");
+          res.body.should.have.property("data");
           done();
         });
     });
   });
 });
-
-// testy test
