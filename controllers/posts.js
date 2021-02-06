@@ -10,7 +10,7 @@ const postsController = {
       const result = await db.query(queryArguements[0], queryArguements[1]);
       res.json({
         message: "sucessfully sent",
-        status: 200,
+        status: res.statusCode,
         count: result.rows.length,
         data: result.rows,
       });
@@ -23,7 +23,7 @@ const postsController = {
       const result = await db.query(Queries.getById, [req.params.id]);
       res.json({
         message: "sucessfully sent",
-        status: 200,
+        status: res.statusCode,
         data: result.rows,
       });
     } catch (e) {
