@@ -1,9 +1,22 @@
 language: node_js
 node_js:
   - "15"
+
+services:
+  - docker
+
+install: skip
+
+before_script:
+  - docker build -t sporty-spice-api:latest .
+  - docker run -d -it -e DBUSER=$DBUSER -e DBHOST=$DBHOST -e DBNAME=$DBNAME -e DBPASS=$DBPASS -e DBPORT=$DBPORT --name=spicy_container sporty-spice-api:latest
+
 script:
-  - echo 'Build starts..'
-  - echo 'Installing Dependencies..'
-  - npm install
-  - echo 'Testing..'
-  - npm test
+  - docker exec -it spicy_container bash -c "npm test"
+  - docker stop spicy_container
+
+deploy:
+  provider: script
+  script: bash heroku-release.sh
+  on:
+    branch: main
