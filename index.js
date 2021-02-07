@@ -3,7 +3,6 @@ import express from "express";
 import Logger from "./middlewares/logger";
 import postRoutes from "./routes/posts";
 
-// I love fried chicken
 
 const app = express();
 const port = process.env.PORT || 3000;
