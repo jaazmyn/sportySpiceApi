@@ -1,6 +1,6 @@
 import ServiceObject from "../services/filterQueryString";
 import db from "../db/config.db";
-import Queries from "../db/queries";
+import Queries from "../db/postsQueries";
 
 const postsController = {
   getPosts: async (req, res) => {
