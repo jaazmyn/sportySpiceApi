@@ -137,17 +137,26 @@ GET /users/:id
 <br/>
 
 
+## User Response Sample
 
-All posts filtered by topic
-<br/>
 ```
-/posts?topic=%topic%
-```
-<br/>
+  "message": "sucessfully sent",
+  "status": 200,
+  "count": 4,
+  "data": [
+    {
+      "json_build_object": {
+        "id": 4,
+        "username": "Avril Ymayo",
+        "email": "ymayo@avril.com",
+        "avatar": "https://i.pinimg.com/736x/34/70/8b/34708b157e918da6a0254637312aa804--wrestling-costumes-wrestling-outfits.jpg",
+        "premium": {
+          "id": 2,
+          "level": "top"
+        }
+      }
+    }
+  ]
+}
 
-All posts filtered by title
-<br/>
 ```
-/posts?search=%title%
-```
-<br/>
