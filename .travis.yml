@@ -19,4 +19,4 @@ deploy:
   provider: script
   script: bash heroku-release.sh
   on:
-    branch: multi-stage
+    branch: main
