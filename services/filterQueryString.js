@@ -1,4 +1,4 @@
-import Queries from "../db/queries";
+import Queries from "../db/postsQueries";
 
 const ServiceObject = {
   filterQuery: (queryString) => {

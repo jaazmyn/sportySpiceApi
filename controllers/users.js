@@ -1,13 +1,11 @@
-import ServiceObject from "../services/filterQueryString";
 import db from "../db/config.db";
-import Queries from "../db/postsQueries";
+import Queries from "../db/usersQueries";
 
-const postsController = {
-  getPosts: async (req, res) => {
-    let queryArguements = ServiceObject.filterQuery(req.query);
-
+const usersController = {
+  getUsers: async (req, res) => {
     try {
-      const result = await db.query(queryArguements[0], queryArguements[1]);
+      console.log(Queries.getAll);
+      const result = await db.query(Queries.getAll);
       res.json({
         message: "sucessfully sent",
         status: res.statusCode,
@@ -18,7 +16,7 @@ const postsController = {
       console.error(Error(e));
     }
   },
-  getById: async (req, res) => {
+  getUsersById: async (req, res) => {
     try {
       const result = await db.query(Queries.getById, [req.params.id]);
       res.json({
@@ -32,4 +30,4 @@ const postsController = {
   },
 };
 
-export default postsController;
+export default usersController;
