@@ -10,12 +10,12 @@ const ServiceObject = {
     } else if (topic) {
       queryArguements = [
         Queries.filterByTopic,
-        ["%" + topic.toLowerCase() + "%"],
+        ["%" + topic + "%"],
       ];
     } else if (search) {
       queryArguements = [
         Queries.searchPosts,
-        ["%" + search.toLowerCase() + "%"],
+        ["%" + search + "%"],
       ];
     } else {
       queryArguements = [Queries.getAll];
