@@ -6,7 +6,6 @@
   "scripts": {
     "test": "mocha --require @babel/register tests/*.js --exit",
     "webpack": "webpack",
-    "start:prod": "npm run webpack && node ./dist/bundle.js",
     "start": "nodemon --exec babel-node index.js"
   },
   "author": "SpiceGirls (including Elie)",

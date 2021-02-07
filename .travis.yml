@@ -12,7 +12,7 @@ before_script:
   - docker run -d -it -e DBUSER=$DBUSER -e DBHOST=$DBHOST -e DBNAME=$DBNAME -e DBPASS=$DBPASS -e DBPORT=$DBPORT --name=spicy_container sporty-spice-api:latest
 
 script:
-  - docker exec -it spicy_container bash -c "npm test"
+  - docker exec -it spicy_container /bin/sh -c "npm test"
   - docker stop spicy_container
 
 deploy:
