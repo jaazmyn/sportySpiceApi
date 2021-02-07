@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Build prod image.."
+docker build -t sporty-spice-api-prod:latest -f Dockerfile.prod .
+
 echo "Login to heroku.."
 docker login --username="j jasmin" --password=$HEROKU registry.heroku.com
 

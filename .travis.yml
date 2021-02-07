@@ -12,14 +12,11 @@ before_script:
   - docker run -d -it -e DBUSER=$DBUSER -e DBHOST=$DBHOST -e DBNAME=$DBNAME -e DBPASS=$DBPASS -e DBPORT=$DBPORT --name=spicy_container sporty-spice-api:latest
 
 script:
-  - docker exec -it spicy_container bash -c "npm test"
+  - docker exec -it spicy_container /bin/sh -c "npm test"
   - docker stop spicy_container
-
-after_script:
-  - docker build -t sporty-spice-api-prod:latest -f Dockerfile.prod .
 
 deploy:
   provider: script
   script: bash heroku-release.sh
   on:
-    branch: main
+    branch: multi-stage
