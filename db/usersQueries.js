@@ -1,7 +1,6 @@
 const queryUsers = {
   /* FIXME: fix users queries */
-  getAll: 
-    `SELECT
+  getAll: `SELECT
       json_build_object(
         'id', u.id,
         'username', u.username,
@@ -14,24 +13,22 @@ const queryUsers = {
       )
       FROM users AS u
       INNER JOIN premium AS pr ON pr.id = u.premium_id`,
-/* ---- ID ---- */
-  getById:
-  `SELECT
-  json_build_object(
-    'id', u.id,
-    'username', u.username,
-    'email', u.email,
-    'avatar', u.avatar_image_url,
-    'premium', json_build_object(
-      'id', pr.id,
-      'level', pr.level
+  /* ---- ID ---- */
+  getById: `SELECT
+    json_build_object(
+      'id', u.id,
+      'username', u.username,
+      'email', u.email,
+      'avatar', u.avatar_image_url,
+      'premium', json_build_object(
+        'id', pr.id,
+        'level', pr.level
+      )
     )
-  )
-  FROM users AS u
-  INNER JOIN premium AS pr ON pr.id = u.premium_id
-  where u.id=$1;`,
-  getUsersFixlater: 
-    `SELECT
+    FROM users AS u
+    INNER JOIN premium AS pr ON pr.id = u.premium_id
+    where u.id=$1;`,
+  getUsersFixlater: `SELECT
       json_build_object(
         'id', u.id,
         'username', u.username,

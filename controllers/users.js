@@ -4,7 +4,6 @@ import Queries from "../db/usersQueries";
 const usersController = {
   getUsers: async (req, res) => {
     try {
-      console.log(Queries.getAll);
       const result = await db.query(Queries.getAll);
       res.json({
         message: "sucessfully sent",
