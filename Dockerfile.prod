@@ -14,9 +14,11 @@ RUN npm install
 
 COPY . .
 
+RUN npm run webpack
+
 FROM node:15-alpine3.10
 
 WORKDIR /app
-COPY --from=base /app ./
+COPY --from=base /app/dist ./dist
 
-
+CMD ["node", "./dist/bundle.js"]

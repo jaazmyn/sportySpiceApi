@@ -4,7 +4,7 @@ echo "Login to heroku.."
 docker login --username="j jasmin" --password=$HEROKU registry.heroku.com
 
 echo "Tag image.."
-docker tag sporty-spice-api:latest registry.heroku.com/sporty-spice-api/web
+docker tag sporty-spice-api-prod:latest registry.heroku.com/sporty-spice-api/web
 
 echo "Push image.."
 docker push registry.heroku.com/sporty-spice-api/web
