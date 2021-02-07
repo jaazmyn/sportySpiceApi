@@ -4,10 +4,10 @@ import Queries from "../db/queries";
 
 const postsController = {
   getPosts: async (req, res) => {
-    let queryArguements = ServiceObject.filterQuery(req.query);
+    let queryArguments = ServiceObject.filterQuery(req.query);
 
     try {
-      const result = await db.query(queryArguements[0], queryArguements[1]);
+      const result = await db.query(queryArguments[0], queryArguments[1]);
       res.json({
         message: "sucessfully sent",
         status: res.statusCode,
