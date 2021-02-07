@@ -4,7 +4,8 @@ import Logger from "./middlewares/logger";
 import postRoutes from "./routes/posts";
 import usersRoutes from "./routes/users";
 
-// I love fried chicken
+//I love fried chicken ... and Aria//
+
 
 const app = express();
 const port = process.env.PORT || 3000;

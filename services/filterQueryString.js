@@ -3,24 +3,24 @@ import Queries from "../db/postsQueries";
 const ServiceObject = {
   filterQuery: (queryString) => {
     const { sort, search, topic } = queryString;
-    let queryArguements;
+    let queryArguments;
 
     if (sort) {
-      queryArguements = [Queries.sortedByRating];
+      queryArguments = [Queries.sortedByRating];
     } else if (topic) {
-      queryArguements = [
+      queryArguments = [
         Queries.filterByTopic,
         ["%" + topic + "%"],
       ];
     } else if (search) {
-      queryArguements = [
+      queryArguments = [
         Queries.searchPosts,
         ["%" + search + "%"],
       ];
     } else {
-      queryArguements = [Queries.getAll];
+      queryArguments = [Queries.getAll];
     }
-    return queryArguements;
+    return queryArguments;
   },
 };
 
