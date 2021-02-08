@@ -6,34 +6,46 @@
 Avril, Janis, Jasmin and Elie
 ```
 
+## Table of Contents 
+- [Description](#Description)
+- [Objectives](#Objectives)
+- [Technology & Tools](#Technology)
+- [Database Schema](#Database-Schema)
+- [API endpoints](#API-endpoints)
+- [Resources](#Resources)
+
+## Description
+3 weeks project: 
+1st and 2nd week
+3rd week - create a React app.
+
+
 ## Technology
-```
-NodeJS
-Express
-Postgres
-```
-
-## Deployed on Heroku with Docker:
-https://sporty-spice-api.herokuapp.com/
-
+- [NodeJS](https://nodejs.org/en/)
+- [Expressjs](https://expressjs.com/en/5x/api.html)
+- [PostgresSQL](https://www.elephantsql.com/)
+- [SQL](https://www.w3schools.com/SQL/default.asp)
+- [babel.js](https://babeljs.io/docs/en/)
+- [travis.yml](https://github.com/travis-ci/travis-yml)/ [travis.yml](https://docs.travis-ci.com/user/tutorial/)
+- [Deployed on Heroku with Docker](https://sporty-spice-api.herokuapp.com/)
 
 
-## Database Description
+## Database Schema
  ![Database](https://res.cloudinary.com/dwovfklgc/image/upload/v1612719938/Screen_Shot_2021-02-07_at_18.45.27_pi5ct9.png)
 
 
-
-## Install the app
+### Workflow
+* Install the app
 ```
 npm install
 ```
 
-## Run the app
+* Run the app
 ```
 npm start
 ```
 
-## Run with Docker
+* Run with Docker
 ```
 docker build -t sporty-spice-api .
 docker run -it -d -p 0.0.0.0:3000:3000 sporty-spice-api:latest
@@ -41,9 +53,7 @@ docker exec -it <container-id> /bin/sh -c "npm start"
 ```
 
 
-
-
-## API endpoints
+### API endpoints
 
 ### Posts
 All posts
@@ -160,3 +170,9 @@ GET /users/:id
 }
 
 ```
+
+
+### Resources
+-[Get HTTP POST Body](https://stackabuse.com/get-http-post-body-in-express-js/)
+-[Best Practices for Naming API Endpoints](https://nordicapis.com/10-best-practices-for-naming-api-endpoints/)
+-[Handle GET and POST Request in Express](https://codeforgeek.com/handle-get-post-request-express-4/)
