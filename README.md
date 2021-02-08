@@ -14,9 +14,7 @@
 - [Resources](#Resources)
 
 ## Description
-3 weeks project: 
-1st and 2nd week
-3rd week - create a React app.
+
 
 
 ## Technology
