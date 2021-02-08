@@ -3,7 +3,7 @@
 
 ## Collaborators
 ```
-Avril, Janis, Jasmin and Elie
+[Avril](https://github.com/AvrilAvril), [Janis](https://github.com/widukin), [Jasmin](https://github.com/jaazmyn) and [Elie](https://github.com/Elie-Soued)
 ```
 
 ## Table of Contents 
@@ -173,6 +173,6 @@ GET /users/:id
 
 
 ### Resources
--[Get HTTP POST Body](https://stackabuse.com/get-http-post-body-in-express-js/)
--[Best Practices for Naming API Endpoints](https://nordicapis.com/10-best-practices-for-naming-api-endpoints/)
--[Handle GET and POST Request in Express](https://codeforgeek.com/handle-get-post-request-express-4/)
+- [Get HTTP POST Body](https://stackabuse.com/get-http-post-body-in-express-js/)
+- [Best Practices for Naming API Endpoints](https://nordicapis.com/10-best-practices-for-naming-api-endpoints/)
+- [Handle GET and POST Request in Express](https://codeforgeek.com/handle-get-post-request-express-4/)
