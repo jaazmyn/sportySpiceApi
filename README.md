@@ -3,7 +3,7 @@
 
 ## Collaborators
 ```
-Avril, Janice, Jasmin and Elie
+Avril, Janis, Jasmin and Elie
 ```
 
 ## Technology
