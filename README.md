@@ -6,12 +6,19 @@
 
 
 ## Table of Contents 
-- [Description](#Description)
-- [Objectives](#Objectives)
-- [Technology & Tools](#Technology)
-- [Database Schema](#Database-Schema)
-- [API endpoints](#API-endpoints)
-- [Resources](#Resources)
+- [Sporty Spice API](#sporty-spice-api)
+  - [Collaborators](#collaborators)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Technology](#technology)
+  - [Database Schema](#database-schema)
+    - [Workflow](#workflow)
+    - [API endpoints](#api-endpoints)
+    - [Posts](#posts)
+  - [Post Response Sample](#post-response-sample)
+    - [Users](#users)
+  - [User Response Sample](#user-response-sample)
+    - [Resources](#resources)
 
 ## Description
 
@@ -23,8 +30,11 @@
 - [PostgresSQL](https://www.elephantsql.com/)
 - [SQL](https://www.w3schools.com/SQL/default.asp)
 - [babel.js](https://babeljs.io/docs/en/)
-- [travis.yml](https://github.com/travis-ci/travis-yml)/ [travis.yml](https://docs.travis-ci.com/user/tutorial/)
 - [Deployed on Heroku with Docker](https://sporty-spice-api.herokuapp.com/)
+- [Test platform travis.yml](https://github.com/travis-ci/travis-yml)/ [travis.yml](https://docs.travis-ci.com/user/tutorial/)
+- [Test framework mocha](https://mochajs.org/)
+- [Assertion Libary chai](https://www.chaijs.com/)
+- [Docker](https://www.docker.com/)
 
 
 ## Database Schema
@@ -77,14 +87,14 @@ GET /posts?sort=rating:desc
 All posts filtered by topic
 <br/>
 ```
-/posts?topic=%topic%
+GET /posts?topic=%topic%
 ```
 <br/>
 
 All posts filtered by title
 <br/>
 ```
-/posts?search=%title%
+GET /posts?search=%title%
 ```
 <br/>
 
@@ -92,7 +102,7 @@ All posts filtered by title
 ## Post Response Sample
 
 ```
-
+{
   "message": "sucessfully sent",
   "status": 200,
   "count": 21,
@@ -147,6 +157,7 @@ GET /users/:id
 ## User Response Sample
 
 ```
+{
   "message": "sucessfully sent",
   "status": 200,
   "count": 4,
