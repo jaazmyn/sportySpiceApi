@@ -2,9 +2,8 @@
 
 
 ## Collaborators
-```
 [Avril](https://github.com/AvrilAvril), [Janis](https://github.com/widukin), [Jasmin](https://github.com/jaazmyn) and [Elie](https://github.com/Elie-Soued)
-```
+
 
 ## Table of Contents 
 - [Description](#Description)
